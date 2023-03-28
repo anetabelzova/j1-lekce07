@@ -20,6 +20,7 @@ class SvatkyTest {
     Svatky svatky = new Svatky();
     assertEquals(MonthDay.of(5, 18), svatky.kdyMaSvatek("Nataša"));
     assertNull(svatky.kdyMaSvatek("Eva"));
+    assertNull(svatky.kdyMaSvatek("fghjk"));
   }
 
   /**
@@ -28,6 +29,10 @@ class SvatkyTest {
   @Test
   void jeVSeznamu() {
     //TODO Otestovat, že najde v seznamu existující jméno a nenajde neexistující jméno
+      Svatky svatky = new Svatky();
+      assertTrue(svatky.jeVSeznamu("Nataša"));
+      assertFalse(svatky.jeVSeznamu("Eva"));
+      assertFalse(svatky.jeVSeznamu("fghjk"));
   }
 
   /**
@@ -36,6 +41,10 @@ class SvatkyTest {
   @Test
   void getPocetJmen() {
     //TODO Otestovat, že vrací počet jmen, která máme v seznamu
+
+      Svatky svatky = new Svatky();
+      assertEquals(svatky.getPocetJmen(10));
+
   }
 
   /**
@@ -52,6 +61,11 @@ class SvatkyTest {
   @Test
   void pridatSvatekDenMesicInt() {
     //TODO Otestuje, že je jméno v seznamu svátků a že má přiřazen správný den
+
+    Svatky svatky = new Svatky();
+    assertEquals(MonthDay.of(5, 18), svatky.kdyMaSvatek("Nataša"));
+    assertNull(svatky.kdyMaSvatek("Eva"));
+    assertNull(svatky.kdyMaSvatek("fghjk"));
   }
 
   /**
