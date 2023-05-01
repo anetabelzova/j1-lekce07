@@ -126,6 +126,7 @@ public class Svatky {
      */
 
     //TODO
+    pridatSvatek(jmeno,MonthDay.of(mesic, den));
   }
 
   /**
@@ -134,5 +135,6 @@ public class Svatky {
    */
   public void smazatSvatek(String jmeno) {
     //TODO
+    svatky.remove(jmeno);
   }
 }
